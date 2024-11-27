@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  php-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80" # Maps container's port 80 to your local port 8080
+    volumes:
+      - ./uploads:/var/www/html/uploads # Maps the uploads folder for persistence
