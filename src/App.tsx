@@ -1,4 +1,4 @@
-import {
+ import {
   IonApp,
   IonRouterOutlet,
   IonSplitPane,
@@ -34,6 +34,8 @@ import WelcomePage from "./pages/welcome";
 import SignupPage from "./pages/signup";
 import ProfileUploadPage from "./pages/profile";
 import SkillDetailsPage from "./pages/skillDetails";
+import HomePage from "./pages/home";
+import SettingsPage from "./pages/settings";
 setupIonicReact();
 
 const App: React.FC = () => {
@@ -41,7 +43,7 @@ const App: React.FC = () => {
     <IonApp>
       <IonReactRouter>
         <IonSplitPane contentId="main">
-          <Menu />
+      <Menu/>
           <IonRouterOutlet id="main">
             <Route path="/" exact={true}>
               <Redirect to="/folder/Inbox" />
@@ -60,6 +62,12 @@ const App: React.FC = () => {
             </Route>
             <Route path="/providers/:skillName" exact={true}>
               <SkillDetailsPage />
+            </Route>
+            <Route path="/pages/home" exact={true}>
+              <HomePage />
+              </Route>
+            <Route path="/pages/settings" exact={true}>
+              <SettingsPage />
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>

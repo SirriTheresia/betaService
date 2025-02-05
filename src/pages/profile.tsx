@@ -16,6 +16,7 @@ import {
 import { collection, addDoc } from "firebase/firestore";
 import { db, storage } from "./fireBase";
 import { ref, uploadString, getDownloadURL } from "firebase/storage";
+import Menu from "../components/Menu";
 import { useHistory } from "react-router-dom";
 
 interface MediaItem {
@@ -143,8 +144,17 @@ const ProfilePage: React.FC = () => {
 
   return (
     <IonPage>
+      <Menu/>
       <IonHeader>
         <IonToolbar>
+        <IonTitle>
+            <img
+              src="./images/logo.png"
+              alt="Logo"
+              style={{ height: "40px", marginRight: "8px" }}
+            />
+            Welcome to BetaService
+          </IonTitle>
           <IonTitle>Profile Page</IonTitle>
         </IonToolbar>
       </IonHeader>

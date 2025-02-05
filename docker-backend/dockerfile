@@ -1,8 +1,0 @@
-FROM php:8.1-apache
-
-# Copy PHP script to web root
-COPY upload.php /var/www/html/
-RUN mkdir -p /var/www/html/uploads && chmod 777 /var/www/html/uploads
-
-# Expose port 80 for the container
-EXPOSE 80

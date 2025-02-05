@@ -23,6 +23,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
 } from "firebase/auth";
+import Menu from "../components/Menu";
 import "./signup.css";
 
 const SignupPage: React.FC = () => {
@@ -99,6 +100,7 @@ const SignupPage: React.FC = () => {
 
   return (
     <IonPage>
+      <Menu/>
       <IonHeader>
         <IonToolbar>
           <IonTitle>Sign Up</IonTitle>

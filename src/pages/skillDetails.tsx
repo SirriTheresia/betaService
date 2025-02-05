@@ -11,6 +11,7 @@ import {
   IonLabel,
 } from "@ionic/react";
 import { collection, query, where, getDocs } from "firebase/firestore";
+import Menu from "../components/Menu";
 import { db } from "./fireBase";
 
 const SkillDetailsPage: React.FC = () => {
@@ -42,6 +43,7 @@ const SkillDetailsPage: React.FC = () => {
 
   return (
     <IonPage>
+      <Menu/>
       <IonHeader>
         <IonToolbar>
           <IonTitle>{skillName} Profiles</IonTitle>

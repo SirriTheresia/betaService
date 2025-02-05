@@ -30,6 +30,10 @@ import {
   trashSharp,
   warningOutline,
   warningSharp,
+  sparkles,
+  sparklesOutline,
+  logOutSharp,
+  logOutOutline
 } from "ionicons/icons";
 import "./Menu.css";
 
@@ -42,7 +46,13 @@ interface AppPage {
 
 const appPages: AppPage[] = [
   {
-    title: "welcome",
+    title: "Home",
+    url: "/pages/home",
+    iosIcon: sparkles,
+    mdIcon:sparklesOutline,
+  },
+  {
+    title: "Welcome",
     url: "/pages/Welcome",
     iosIcon: homeOutline,
     mdIcon: homeSharp,
@@ -65,23 +75,13 @@ const appPages: AppPage[] = [
     iosIcon: heartOutline,
     mdIcon: heartSharp,
   },
+  
+  
   {
-    title: "settings",
-    url: "/folder/Archived",
+    title: "Settings",
+    url: "/pages/settings",
     iosIcon: settingsOutline,
     mdIcon: settingsSharp,
-  },
-  {
-    title: "Trash",
-    url: "/folder/Trash",
-    iosIcon: trashOutline,
-    mdIcon: trashSharp,
-  },
-  {
-    title: "Spam",
-    url: "/folder/Spam",
-    iosIcon: warningOutline,
-    mdIcon: warningSharp,
   },
 ];
 

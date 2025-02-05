@@ -15,6 +15,7 @@ import {
   IonButton,
 } from "@ionic/react";
 import { searchOutline } from "ionicons/icons";
+import Menu from "../components/Menu";
 import { useHistory } from "react-router-dom";
 
 const backgroundImages = [
@@ -65,6 +66,7 @@ const WelcomePage: React.FC = () => {
 
   return (
     <IonPage>
+      <Menu/>
       <IonHeader>
         <IonToolbar>
           <IonTitle>
@@ -75,13 +77,13 @@ const WelcomePage: React.FC = () => {
             />
             Welcome to BetaService
           </IonTitle>
-          <IonButton
+          {/* <IonButton
             slot="end"
             fill="clear"
             onClick={() => history.push("/signup")}
           >
             Sign Up
-          </IonButton>
+          </IonButton> */}
         </IonToolbar>
       </IonHeader>
 
@@ -105,11 +107,11 @@ const WelcomePage: React.FC = () => {
         <IonGrid>
           <IonRow>
             {filteredSkills.map((skill) => (
-              <IonCol key={skill.name} size="6" className="ion-text-center">
+              <IonCol key={skill.name} size="3" className="ion-text-center">
                 <img
                   src={skill.image}
                   alt={skill.name}
-                  style={{ width: "100px", height: "100px" }}
+                  style={{ width: "200px", height: "200px" }}
                 />
                 <IonText
                   color="primary"
